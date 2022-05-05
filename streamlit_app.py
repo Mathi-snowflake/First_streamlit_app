@@ -8,5 +8,5 @@ streamlit.text('🥑🍞 Avocado Toast')
 
 
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
-streamlit.Text('Oats with dates\,Almond\,cashew\,apple')
+streamlit.text('Oats with dates\,Almond\,cashew\,apple')
 streamlit.text("Soak it for half an hour and Grind to a smooth liquid")
