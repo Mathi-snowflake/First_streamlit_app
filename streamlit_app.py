@@ -8,5 +8,5 @@ streamlit.text('🥑🍞 Avocado Toast')
 
 
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
-streamlit.text('Oat\'s with dates,Almond,cashew,apple')
-streamlit.text("Soak it for half an hour and Grind to a smooth liquid")
+import pandas
+my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
