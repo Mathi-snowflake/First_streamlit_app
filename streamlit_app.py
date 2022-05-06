@@ -15,7 +15,7 @@ my_fruit_list = my_fruit_list.set_index('Fruit')
 fruits_selected = streamlit.multiselect("Pick some fruits:",list(my_fruit_list.index),['Banana','Peach'])
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
-If fruits_to_show == NULL Then
+If fruits_to_show = NULL Then
 streamlit.dataframe(my_fruit_list)
 Else
 End If
