@@ -31,5 +31,5 @@ streamlit.text(fruitvice_response.json())#just writes the data to the screen
 fruitvice_normalize = pandas.json_normalize(fruitvice_response.json())
 streamlit.dataframe(fruitvice_normalize)
 
-fruit_choice = streamlit.text_input("What fruit would you like to know about",'kiwi')
+fruit_choice = streamlit.text_input('What fruit would you like to know about','kiwi')
 streamlit.write('The user entered - 'fruit_choice)
