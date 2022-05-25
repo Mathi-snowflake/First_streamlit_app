@@ -1,4 +1,6 @@
 import streamlit
+import pandas
+import requests
 streamlit.title("My First streamlit App")
 streamlit.header('Breakfast Favorites')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
@@ -8,7 +10,7 @@ streamlit.text('🥑🍞 Avocado Toast')
 
 
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
-import pandas
+
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 streamlit.dataframe(my_fruit_list)
 my_fruit_list = my_fruit_list.set_index('Fruit')
@@ -22,9 +24,9 @@ else :
   
 streamlit.header("Fruitvice response")
 
-import requests
+
 fruitvice_response = requests.get("https://www.fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruitvice_response.json())#just writes the data to the screen
 
-fruitvice_normalize = pandas.normalize(fruitvice_response.json())
-#streamlit.dataframe(fruitvice_normalize)
+fruitvice_normalize = pandas.json_normalize(fruitvice_response.json())
+streamlit.dataframe(fruitvice_normalize)
