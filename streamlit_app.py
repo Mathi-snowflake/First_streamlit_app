@@ -19,3 +19,7 @@ if fruits_selected:
   streamlit.dataframe(fruits_to_show)
 else : 
   streamlit.dataframe(my_fruit_list)
+
+import requests
+fruitvice_response = requests.get("https://www.fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruitvice_response)
