@@ -25,7 +25,7 @@ else :
 streamlit.header("Fruitvice response")
 
 
-fruitvice_response = requests.get("https://www.fruityvice.com/api/fruit/watermelon")
+fruitvice_response = requests.get("https://www.fruityvice.com/api/fruit/" +"kiwi")
 streamlit.text(fruitvice_response.json())#just writes the data to the screen
 
 fruitvice_normalize = pandas.json_normalize(fruitvice_response.json())
