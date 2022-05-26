@@ -1,6 +1,7 @@
 import streamlit
 import pandas
 import requests
+from urllib.error import URLError
 streamlit.title("My First streamlit App")
 streamlit.header('Breakfast Favorites')
 streamlit.text('🥣 Omega 3 & Blueberry Oatmeal')
